@@ -1,2 +1,2 @@
 # Isha-Singh
-My first Repository
+Beginner-friendly projects using HTML/CSS and Python, created to practice responsive design and improve logic building.
