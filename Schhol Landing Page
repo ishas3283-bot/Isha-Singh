@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <title>My School Dashboard</title>
+    <link rel="stylesheet" href="School.css">
+</head>
+<style>
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.navy{
+    display: flex;
+    color: aliceblue;
+    background-color: rgb(11, 188, 135);
+    padding: 15px 20px;
+}
+.navy a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15pt;
+    justify-content: space-around;
+    padding-right: 200px;
+    font-weight: bold;
+}
+.logo{
+    color: chocolate;
+    font-size: 20pt;
+    font-weight: bolder;
+    transition: 0.3s;
+    margin: 7%;
+    text-align: center;
+}
+.logo :hover{
+    color: brown;
+    cursor: pointer;
+}
+.menuitem{
+    display: flex;
+    background-color: aqua;
+}
+.menuitem {
+    display: flex;
+    color: aliceblue;
+    background-color: rgb(11, 188, 135);
+    padding: 15px 20px;
+}
+.menuitem a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15pt;
+    justify-content: space-around;
+    padding-right: 50px;
+    font-weight: bold;
+}
+.menuitem a:hover{
+    padding: 15px 20px;
+    background-color: brown;
+}
+section{
+    display: flex;
+    margin: 18pt;
+    font-size: 16pt;
+    padding: 32px;
+}
+h4{
+    color: brown;
+    font-weight: bold;
+}
+footer{
+    background-color: rgb(154, 154, 150);
+    padding: 0.5%;
+    display: flex;
+}
+.footer_1{
+    padding-left: 100px;
+    font-size: 14pt;
+}
+.footer_1 a{
+    color: darkgreen;
+}
+.footer_2{
+    padding-left: 100px;
+    font-size: 14pt;
+}
+.footer_2 a{
+    color: darkgreen;
+}
+</style>
+<body>
+    <div class="navy">
+   <nav>
+    <a href="@"> Number : +117875888</a>
+    <a href="@">Email : jinvanischool@gmail.com</a>
+    <a href="@">Login/Registration</a> 
+   </nav>
+   </div>
+   <div class="logo">Jinvani Bharti Public School</div>
+   <header>
+    <div class="menuitem">
+        <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Parent Teacher Meeting</a>
+        <a href="#">Mandatory Disclosure</a>
+        <a href="#">Academic Result</a>
+        <a href="#">Our Policies</a>
+        <a href="#">Updates</a> 
+        <a href="#">Contact Us</a>     
+        </nav>                                            
+    </div>
+   </header>
+   <!--Hero Section-->
+   <section id="Hero-section">
+    <div class="content">
+        <u><h2 id="Parent Teacher Meeting">Parent Teacher Meeting</h2></u>
+        <p id="content-mode">2nd Saturday and last day of each month will be parent's day. <br>They can contact the subject Teacher/ Principal to discuss the progress of their wards.
+Meeting with Principal should be arranged by prior appointment through the receptionist/P.R.O. For all information regarding the school, please contact the receptionist/P.R.O.</p>
+<h4 id="timing">School Timing(Throughout the Year)</h4>
+<b><p>Jinvani Bharti Public School</p></b><br>
+<p>8.00 A.M. to 2.00 P.M.</p>
+    </div>
+    <div class="photo">
+        <img src="C:\Users\user\Downloads\contentpage_jbps_7_1.jpg" alt="clock: Jinvani Bharti Public School">
+    </div>
+</section>
+<footer>
+    <div class="footer_1">
+    <p>© Copyright <a href="https://jinvanischool.com/parent_teachermeeting.php"> Jinvani  Bharti Public School </a> All Rights Reserved</p>
+    </div>
+    <div class="footer_2">Powered by <a href="https://jinvanischool.com/parent_teachermeeting.php">Schoolsindia</a>
+    </div>
+</footer>
+</body>
