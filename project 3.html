@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Merge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+    </head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: "Poppins", sans-serif;
+        }
+        #reader{
+            width: 50%;
+            height: 40vh;
+            border: 2px solid black;
+            border-radius: 6px;
+            margin: 0 20%;
+            padding: 20px;
+        }
+        #font_size{
+            padding: 15px 20px;
+            color: aliceblue;
+            background-color: darkmagenta;
+            border-radius: 10px;
+        }
+        #font_size:hover{
+            box-shadow: 0 0 0 12px rgba(243, 255, 7, 0.918);
+            outline: none;
+            color: brown;
+            background-color: aliceblue;
+        }
+        #color{
+            padding: 15px 20px;
+            color: aliceblue;
+            background-color: rgb(29, 122, 1);
+            border-radius: 10px;
+        }
+        #color:hover{
+            box-shadow: 0 0 0 12px rgba(243, 255, 7, 0.918);
+            outline: none;
+            color: brown;
+            background-color: aliceblue;
+        }
+        .godwish{
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #count{
+             padding: 15px 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(84, 39, 2);
+            border-radius: 10px;
+        }   
+        #count:hover{
+            box-shadow: 0 0 0 12px rgba(243, 255, 7, 0.918);
+            outline: none;
+            color: brown;
+            background-color: aliceblue;
+        }
+        #points{
+            width: 50%;
+            height: 5vh;
+            border: 2px solid black;
+            border-radius: 6px;
+            margin: 0 20%;
+            padding: 20px;
+        }
+        #modes{
+            padding: 15px 20px;
+            color: aliceblue;
+            background-color: rgb(0, 89, 255);
+            border-radius: 10px;
+        }
+        #modes:hover{
+            box-shadow: 0 0 0 12px rgba(243, 255, 7, 0.918);
+            outline: none;
+            color: brown;
+            background-color: aliceblue;
+        }
+    </style>
+    <body>
+        <h1 style="text-align: center; padding: 30px; color: red;">Welcome to Reading app</h1>
+        <h4 style="text-align: center; margin: 20px;" >Upload your document here!</h4>
+        <p id="here" style="text-align: center;"> Here are your result<br>Characters: <span id="characters">0</span><br> Words: <span id="words"></span></p>
+        
+        <label for="reader">
+            <textarea name="reader" id="reader"></textarea>
+        </label>
+        <label for="file">
+            <input type="file" id="file" placeholder="Upload your file">
+        </label><br>
+        
+        <div class="godwish">
+        <button id="font_size">Change Font Size</button><br>
+        <button id="color"> Click to change color</button><br>
+        <button id="count">Count the words and characters</button><br>
+        <button id="modes">Dark/Light Mode</button>
+
+        </div>
+        <!-- <label id="enter">
+            <textarea id="points" placeholder="Enter your points here"></textarea>
+        </label> -->
+        <script>
+            const characters = document.getElementById('characters');
+            const file = document.getElementById('file');
+            const fontsize = document.getElementById('font_size');
+            const count = document.getElementById('count');
+            const color = document.getElementById('color');
+            const modes = document.getElementById('modes');
+            const reader = document.getElementById('reader');
+            const words = document.getElementById('words');
+
+            //For landing words into box
+           file.addEventListener('change', function () {
+    const fileup = file.files[0];   // file comes from <input type="file">
+
+    if (fileup) {
+        const filereader = new FileReader();
+
+        filereader.onload = function (e) {
+            reader.value = e.target.result; // output goes to <textarea id="file">
+        };
+
+        filereader.readAsText(fileup);
+    }
+});
+//For changing colors
+let index_color = 0
+const colors = ["blue", "black", "magenta", "green", "violet"]
+
+color.addEventListener('click', function(){
+    const random = colors[Math.floor(Math.random()*colors.length)];
+
+    reader.style.backgroundColor = colors[index_color];
+    reader.style.color = "white";
+    index_color = (index_color + 1) % colors.length; 
+})
+//word counter write this code as well
+reader.addEventListener('input', function(){
+    characters.innerText = reader.value.length;
+
+    function countWords() {
+  let text = document.getElementById("text").value.trim();
+
+  // Split by space → remove empty values
+  let words = text.split(" ").filter(w => w !== "");
+
+  document.getElementById("result").innerHTML =
+    "Words: " + (text.length === 0 ? 0 : words.length);
+}
+})
+//For changing font size
+let fonty = 0;
+const souu = ["12px", "18px", "22px", "34px", "43px", "54px"]
+fontsize.addEventListener('click', function(){
+    
+    reader.style.fontSize = souu[fonty];
+    fonty = (fonty + 1) % souu.length
+})                      
+//Modes 
+modes.addEventListener('click', function(){
+    if(document.body.style.backgroundColor == "white"){
+        document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+        h1.style.color == "green"
+    } else{
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black"
+    }
+})            
+        </script>
+    </body>
+</html>
