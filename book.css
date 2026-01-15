@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+.logo{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:700;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: brown;
+    margin-bottom: 30px;
+
+}
+#Bookme{
+    display: flex;
+}
+.book-image{
+    margin-top: 70px;
+    box-shadow: 10px 10px rgb(85, 77, 77);
+    margin-left: 100px;
+    position: sticky;
+}
+.book-intro{
+    margin-top: 70px;
+    text-align: center;
+}
